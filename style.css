@@ -1,0 +1,100 @@
+/* *{
+    border: 3px solid black;
+} */
+
+body{
+    background-color: green;
+}
+
+div{
+    width: 100%;
+    height: 220px;
+    border: 3px solid black;
+}
+
+.enemyStats{
+    height:215px;
+}
+
+.enemyStatsHeader{
+    width: 100%;
+}
+
+.emptySpace{
+    width: 50%;
+    height:215px;
+}
+
+.playerStats{
+    height:215px;
+}
+
+.playerStatsHeader{
+    width: 100%;
+}
+
+.playerSection{
+    display: flex;
+}
+
+.enemySection{
+    display: flex;
+}
+
+.enemyImg{
+    text-align: center;
+    background-color: white;
+    animation-name: none;
+    animation-duration: 3s;
+}
+
+.enemyImage{
+    max-height: 200px;
+    margin:0 auto;
+    animation-name: none;
+    animation-duration: 3s;
+    
+}
+
+.playerImg{
+    text-align: center;
+    background-color: white;
+    animation-name: none;
+
+}
+
+.playerImage{
+    max-height: 200px;
+    margin:0 auto;
+    animation-name: none;
+    
+}
+
+button{
+    text-align: center;
+    margin-top: 50px;
+    height: 50px;
+    width: 100px;
+}
+
+
+@-webkit-keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+  }
+  @keyframes flip-horizontal-bottom {
+    0% {
+      -webkit-transform: rotateX(0);
+              transform: rotateX(0);
+    }
+    100% {
+      -webkit-transform: rotateX(-180deg);
+              transform: rotateX(-180deg);
+    }
+  }

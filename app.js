@@ -13,6 +13,7 @@ const enemyHealth = () => {
 enemyHealthBar = enemyHealthBar - PlayerStats.hitDamage;
 $('.textBox').text(`${Zombie.name} took ${PlayerStats.hitDamage} Damage!`)
 $('.enemyHealthBar').text(`Health: ${enemyHealthBar}`);
+$('.enemyImg').css('background-color' , 'white');
 enemyAttack();
 }
 
@@ -78,9 +79,6 @@ $('.attack').on('click', function(){
     });
 
 $('.defense').on('click', playerDefense);
-
-
-
 
 // $ closing tag
 });

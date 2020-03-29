@@ -60,14 +60,12 @@ div{
     text-align: center;
     background-color: white;
     animation-name: none;
-
 }
 
 .playerImage{
     max-height: 200px;
     margin:0 auto;
     animation-name: none;
-    
 }
 
 button{
@@ -75,6 +73,15 @@ button{
     margin-top: 50px;
     height: 50px;
     width: 100px;
+}
+
+.gameFieldImgDiv{
+    text-align: center;
+}
+
+.gameFieldImg{
+    max-height: 220px;
+    margin: 0 auto;
 }
 
 

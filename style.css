@@ -73,6 +73,7 @@ button{
     margin-top: 50px;
     height: 50px;
     width: 100px;
+    margin-left: 20px;
 }
 
 .gameFieldImgDiv{
@@ -82,6 +83,14 @@ button{
 .gameFieldImg{
     max-height: 220px;
     margin: 0 auto;
+}
+
+h1{
+    margin-left: 20px;
+}
+
+h2{
+    margin-left: 20px;
 }
 
 

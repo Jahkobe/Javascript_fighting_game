@@ -51,6 +51,8 @@ div{
 .enemyImage{
     max-height: 200px;
     margin:0 auto;
+    animation-name: none;
+    animation-duration: 2s;
 }
 
 .playerImg{
@@ -63,6 +65,8 @@ div{
 .playerImage{
     max-height: 200px;
     margin:0 auto;
+    animation-name: none;
+    animation-duration: 2s;
 }
 
 button{

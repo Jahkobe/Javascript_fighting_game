@@ -51,21 +51,18 @@ div{
 .enemyImage{
     max-height: 200px;
     margin:0 auto;
-    animation-name: none;
-    animation-duration: 3s;
-    
 }
 
 .playerImg{
     text-align: center;
     background-color: white;
     animation-name: none;
+    animation-duration: 1.5s;
 }
 
 .playerImage{
     max-height: 200px;
     margin:0 auto;
-    animation-name: none;
 }
 
 button{

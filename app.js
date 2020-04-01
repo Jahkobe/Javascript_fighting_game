@@ -13,17 +13,16 @@ $('.enemyMagicBar').append(enemyMagicBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
-const superStrength = [50];
+const fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
 const zombieStrength = [0,4,5,6,7,8,9];
 // this is the array used to choose randomly from that decides whether the enemy attacks or defends
 const zombiesChoice = [0,1]; 
 
-
 // this function is called when the player attacks, either the enemy is damaged or  will eventually be able to miss as well
 const enemyHealth = () => {
 // using the array to pick a random number then storing it in a variable
-    PlayerStats.hitDamage = superStrength[Math.floor(Math.random() * superStrength.length)];
+    PlayerStats.hitDamage = fistStrength[Math.floor(Math.random() * fistStrength.length)];
     enemyHealthBar = enemyHealthBar - PlayerStats.hitDamage;
 
   
@@ -32,7 +31,6 @@ const enemyHealth = () => {
             $('.enemyHealthBar').text(`Health: ${enemyHealthBar}`);
             setTimeout(enemyDefeated, 2000);
         }else{
-
 
             if(PlayerStats.hitDamage > 0){
                 $('.textBox').text(`${Zombie.name} took ${PlayerStats.hitDamage} Damage!`);
@@ -112,6 +110,28 @@ const yourTurn = () => {
 const enemyDefeated = () => {
     $('.textBox').text(`${Zombie.name} has been defeated!`);
     setTimeout(backToNormalWindow, 2000); 
+    
+}
+
+
+const Inventory = () => {
+    $('.btn').css('visibility', 'hidden');
+    $('.InventoryDiv').css('visibility', 'visible');
+    $('.close1').on('click', function(){
+        $('.InventoryDiv').css('visibility', 'hidden');
+        yourTurn();
+    });
+  
+}
+
+const Weapons = () => {
+    $('.btn').css('visibility', 'hidden');
+    $('.WeaponsDiv').css('visibility', 'visible');
+    $('.close2').on('click', function(){
+        $('.WeaponsDiv').css('visibility', 'hidden');
+        yourTurn();
+    });
+  
 }
 
 
@@ -144,6 +164,7 @@ const PlayerStats = {
 
 
 
+
 const Hero = new Player("Hero", "superStrength", 100, "ok");
 console.log(Hero);
 const Zombie = new Enemy("Zombie", "zombieStrength", 100, "weak");
@@ -160,6 +181,20 @@ $('.defense').on('click', function(){
     playerDefense();
     $('.btn').css('visibility', 'hidden');
 });
+
+$('.Inventory').on('click', function(){
+    Inventory();
+});
+
+$('.Weapons').on('click', function(){
+    Weapons();
+});
+
+
+
+$('.InventoryWeaponsSection').css('visibility', 'hidden');
+
+
 
 // $ closing tag
 });

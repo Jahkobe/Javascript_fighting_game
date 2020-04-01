@@ -94,6 +94,20 @@ h2{
     margin-left: 20px;
 }
 
+.textContainer{
+    display: flex;
+}
+
+.InventoryDiv{
+    width:50%;
+    margin: 0;
+}
+
+.WeaponsDiv{
+    width: 50%;
+    margin: 0;
+}
+
 
 @-webkit-keyframes flip-horizontal-bottom {
     0% {

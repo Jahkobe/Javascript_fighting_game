@@ -55,6 +55,28 @@ div{
     animation-duration: 2s;
 }
 
+.enemyImag{
+    max-height: 200px;
+    margin:0 auto;
+    animation-name: none;
+    animation-duration: 2s;
+}
+
+.enemyIma{
+    max-height: 200px;
+    margin:0 auto;
+    animation-name: none;
+    animation-duration: 2s;
+}
+
+.enemyIm{
+    max-height: 200px;
+    margin:0 auto;
+    animation-name: none;
+    animation-duration: 2s;
+}
+
+
 .playerImg{
     text-align: center;
     background-color: white;
@@ -99,13 +121,15 @@ h2{
 }
 
 .InventoryDiv{
-    width:50%;
+    width:100%;
     margin: 0;
+    display: none;
 }
 
 .WeaponsDiv{
-    width: 50%;
+    width: 100%;
     margin: 0;
+    display: none;
 }
 
 

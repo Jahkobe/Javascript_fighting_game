@@ -7,9 +7,6 @@ let playerMagicBar = 100;
 let enemyHealthBar = 100;
 let enemyMagicBar = 100;
 
-let enemyHealthBar2 = 100;
-let enemyMagicBar2 = 100;
-
 $('.playerHealthBar').append(playerHealthBar);
 $('.playerMagicBar').append(playerMagicBar);
 $('.enemyHealthBar').append(enemyHealthBar);
@@ -17,7 +14,7 @@ $('.enemyMagicBar').append(enemyMagicBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
-const fistStrength = [50];
+const fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
 // real fistStrength
 // [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
@@ -34,7 +31,7 @@ const enemyHealth = () => {
   
         if(enemyHealthBar < 1){
             $('.textBox').text(`${enemies[0]} took ${PlayerStats.hitDamage} Damage!`);
-            $('.enemyHealthBar').text(`Health: ${enemyHealthBar}`);
+            $('.enemyHealthBar').text(`Health: 0`);
             setTimeout(enemyDefeated, 2000);
         }else{
 
@@ -147,6 +144,7 @@ const changeEnemies3 = () => {
 }
 
 const droppedItems = () => {
+
     const $cookie = $('<button>').addClass('cookie').text('Cookie');
     $('.InventoryDiv').append($cookie);
     $('.textBox').text('The enemy dropped a cookie and you picked it up.');
@@ -161,9 +159,17 @@ const droppedItems = () => {
 }
 
 const enemyDefeated = () => {
-    $('.textBox').text(`${enemies[0]} has been defeated!`); 
+    $('.textBox').text(`${enemies[0]} has been defeated!`);
+    if(enemies[0] === enemies[3]){
+    setTimeout(youWin, 2000);
+    }else{
     setTimeout(droppedItems,2000);
+    }
     
+}
+
+const youWin = () => {
+    $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
 }
 
 
@@ -176,15 +182,15 @@ const Inventory = () => {
         yourTurn();
     });
     $('.cookie').on('click', function(){
-        playerHealthBar = 100;
-        $('.playerHealthBar').text(`Health: ${playerHealthBar}`);
-        $('.textBox').text('You ate the cookie and regained all your health!');
+        $('.playerHealthBar').text(`Health: ${playerHealthBar = playerHealthBar + 10}`);
+        $('.textBox').text('You ate the cookie and regained 10 health!');
         $('.InventoryDiv').css('display', 'none');
         $('.cookie').css('display', 'none');
         setTimeout(enemyAttack, 2000);
     });
   
 }
+
 
 const Weapons = () => {
     $('.btn').css('visibility', 'hidden');
@@ -228,6 +234,8 @@ const PlayerStats = {
 
 const enemies = ["Zombie", "Vampire", "Mummy", "Werewolf"];
 
+const cookies = ["cookie", "bubblegun", "soda pop", "trail mix"]
+
 for (index = 0; index < enemies.length; index++) { 
     console.log(enemies[0]);
 } 
@@ -243,7 +251,7 @@ const Vampire = new Enemy("Vampire", "vampireStrength", 100, "fast");
 
 const Mummy = new Enemy("Mummy", "mummyStrength", 100, "slow");
 
-const WereWolf = new Enemy("Werewolf", "wereStrength", 100, "superfast");
+const WereWolf = new Enemy("Werewolf", "werewolfStrength", 100, "superfast");
 
 
 $('.attack').on('click', function(){

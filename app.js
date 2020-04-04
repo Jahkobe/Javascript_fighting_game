@@ -119,7 +119,7 @@ const changeEnemies1 = () => {
     $('.enemyHealthBar').text(`Health: ${enemyHealthBar}`);
     enemies[0] = enemies[1];    
     console.log(enemies[0]);
-    const $vampireImg = $('<img>').addClass('enemyImag').attr('src', 'http://pixelartmaker.com/art/009a4d0d470ac85.png');
+    const $vampireImg = $('<img>').addClass('enemyImag').attr('src', 'https://pixelartmaker.com/art/009a4d0d470ac85.png');
     $('.enemyImage').replaceWith($vampireImg);
     setTimeout(yourTurn, 2000); 
 }

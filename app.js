@@ -15,6 +15,12 @@ $('.enemyHealthBar').append(enemyHealthBar);
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
 const fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
+
+const axeStrength = [0, 30, 35, 36, 37, 50];
+
+const chainsawStrength = [0, 40, 41, 42, 43, 50];
+
+const samuriStrength = [0, 40, 45, 50, 48];
 // real fistStrength
 // [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
@@ -237,16 +243,16 @@ const Inventory = () => {
 }
 
 
-const Weapons = () => {
-    $('.btn').css('visibility', 'hidden');
-    $('.WeaponsDiv').css('display', 'block');
-    $('.InventoryDiv').css('display', 'none');
-    $('.close2').on('click', function(){
-        $('.WeaponsDiv').css('display', 'none');
-        yourTurn();
-    });
+// const Weapons = () => {
+//     $('.btn').css('visibility', 'hidden');
+//     $('.WeaponsDiv').css('display', 'block');
+//     $('.InventoryDiv').css('display', 'none');
+//     $('.close2').on('click', function(){
+//         $('.WeaponsDiv').css('display', 'none');
+//         yourTurn();
+//     });
   
-}
+// }
 
 
 
@@ -333,6 +339,9 @@ $('.Weapons').on('click', function(){
 
 
 // start screen functions etc.
+//
+//
+//
 
 const yourNameIsHero = () => {
     $('.startScreenText').text("Your name is Hero!");

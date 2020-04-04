@@ -30,7 +30,7 @@ Then I started working on the inventory function, I used jquery to update a new 
 
 Lastly I started working on the opening scene where you could walk around freely until the enemies approached. I didn't have much time to do this at all but was able to follow some tutorials to get my player moving and used some onclick functions to go through the dialouge and have the enemies appear.
 
-Roadblocks:
+Roadblocks/challenges:
 
 I ran into a bunch of roadblocks while doing this.
 

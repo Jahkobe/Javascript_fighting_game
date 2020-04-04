@@ -79,27 +79,27 @@ const playerHealth = () => {
 
 }
 
-
+// first function called when you click attack
 const playerAttack = () => {
     $('.textBox').text(`${Hero.name} Attacks`);
     console.log(`${enemies[0]} Attacks`);
     setTimeout(enemyHealth, 2000);
 }
 
-
+// directly after you attack the enemyAttack is called instantly
 const enemyAttack = () => {
     $('.textBox').text(`${enemies[0]} Attacks`);
     console.log(`${enemies[0]} Attacks`);
     setTimeout(playerHealth, 2000);
 }
 
-
+// this was an attempt to set the background back to white after enemy is injured
 const backToNormalWindow = () => {
     $('.playerImg').css('background-color' , 'white');
     setTimeout(yourTurn, 1000);
 }
 
-
+// this is the first function that is called when you press defense
 const playerDefense = () => {
     $('.textBox').text(`${Hero.name}s Defense Increased! `);
     zombieStrength.push(0);
@@ -107,12 +107,16 @@ const playerDefense = () => {
     setTimeout(enemyAttack,2000);
 }
 
-
+// after both players go then yourTurn is called 
 const yourTurn = () => {
     $('.btn').css('visibility', 'visible');
     $('.textBox').text(`It's your turn...`);
 }
 
+
+// These are the functions called when the enemies are changing
+// each enemy is changed through an array an an if statement inside of the 
+// dropped items funciton
 const changeEnemies1 = () => {
     $('.textBox').text(`It looks like a new enemy is approaching!`);
     enemyHealthBar = 100;
@@ -146,6 +150,10 @@ const changeEnemies3 = () => {
     setTimeout(yourTurn, 2000);  
 }
 
+
+// This is the funtion that is called right after the enemy dies and also cycles through the 
+// bad guys depending on where you are at in the game
+
 const droppedItems = () => {
 
     
@@ -169,6 +177,9 @@ const droppedItems = () => {
 
 }
 
+
+// when the enemy is defeated this function is called
+
 const enemyDefeated = () => {
     $('.textBox').text(`${enemies[0]} has been defeated!`);
     if(enemies[0] === enemies[3]){
@@ -178,6 +189,8 @@ const enemyDefeated = () => {
     }
     
 }
+
+// this function is called when you defeat all bad guys
 
 const youWin = () => {
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
@@ -246,6 +259,11 @@ class Player {
         }
 }
 
+
+// this didn't really get used but once I incorporate experience points and getting stronger etc
+// this will be added
+
+
 // class Enemy {
 //     constructor(name, power, health, defense){
 //         this.name = name;
@@ -280,6 +298,9 @@ for (index = 0; index < items.length; index++) {
 
 const Hero = new Player("Hero", "superStrength", 100, "ok");
 console.log(Hero);
+
+
+//these classes will be used in the future
 
 // const Zombie = new Enemy("Zombie", "zombieStrength", 100, "weak");
 

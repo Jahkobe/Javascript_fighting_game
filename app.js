@@ -348,7 +348,7 @@ $('.Weapons').on('click', function(){
 
 const yourNameIsHero = () => {
     $('.startScreenText').text("Your name is Hero!");
-    setTimeout(moveAround, 3000);
+    setTimeout(moveAround, 4000);
 };
 
 const moveAround = () => {
@@ -370,7 +370,7 @@ $('.fight').css('visibility', 'hidden');
 $('.startGame').on('click', function(){
     $('.startScreenText').text("This is you!");
     $('.startGame').css("display", "none");
-    setTimeout(yourNameIsHero, 2000);
+    setTimeout(yourNameIsHero, 4000);
 });
 
 

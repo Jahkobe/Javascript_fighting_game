@@ -14,7 +14,7 @@ $('.enemyHealthBar').append(enemyHealthBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
-const fistStrength = [100];
+const fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
 // real fistStrength
 // [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player

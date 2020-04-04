@@ -183,7 +183,7 @@ const youWin = () => {
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
     $('.btn').css('visibility', 'hidden');
     const $winbutton = $('<button>').addClass('winButton').attr('src', 'index.html');
-    $($winbutton).append('.InventoryWeaponsSection');
+    $('.InventoryWeaponsSection').append($winbutton);
     
 
     $('.winButton').on('click', function(){
@@ -343,10 +343,6 @@ $('.startGame').on('click', function(){
     $('.startGame').css("display", "none");
     setTimeout(yourNameIsHero, 2000);
 });
-
-
-
-
 
 
 let circle = document.querySelector('.circle');

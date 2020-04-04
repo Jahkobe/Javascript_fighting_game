@@ -141,7 +141,7 @@ h2{
 }
 
 .startScreenPlayerImage{
-    margin-top: 50px;
+    margin-top: 680px;
     transform-origin:left bottom;
 }
 
@@ -157,6 +157,26 @@ h2{
 
 .startScreenTextDiv{
     text-align: center;
+}
+
+.startScreenZombieImage{
+    margin-top: 400px;
+    visibility: hidden;
+}
+
+.startScreenVampireImage{
+    margin-top: 400px;
+    visibility: hidden;
+}
+
+.startScreenMummyImage{
+    margin-top: 400px;
+    visibility: hidden;
+}
+
+.startScreenWerewolfImage{
+    margin-top: 400px;
+    visibility: hidden;
 }
 
 

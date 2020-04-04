@@ -22,6 +22,9 @@ const zombieStrength = [0,4,5,6,7,8,9];
 // this is the array used to choose randomly from that decides whether the enemy attacks or defends
 const zombiesChoice = [0,1]; 
 
+
+
+
 // this function is called when the player attacks, either the enemy is damaged or  will eventually be able to miss as well
 const enemyHealth = () => {
 // using the array to pick a random number then storing it in a variable
@@ -177,7 +180,6 @@ const enemyDefeated = () => {
 }
 
 const youWin = () => {
-    $('.enemyImage').
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
 }
 
@@ -304,11 +306,34 @@ $('.Weapons').on('click', function(){
 
 // start screen functions etc.
 
-$('.fight').css('display', 'none')
+const yourNameIsHero = () => {
+    $('.startScreenText').text("Your name is Hero!");
+    setTimeout(moveAround, 2000);
+};
+
+const moveAround = () => {
+    $('.startScreenText').text("Move around using the left and right arrow keys");
+    setTimeout(enemysApproaching, 6000);
+};
+
+const enemysApproaching = () => {
+    $('.startScreenText').text("Looks like some enemies are approaching!");
+    $('.startScreenZombieImage').css('visibility', 'visible');
+    $('.startScreenVampireImage').css('visibility', 'visible');
+    $('.startScreenMummyImage').css('visibility', 'visible');
+    $('.startScreenWerewolfImage').css('visibility', 'visible');
+    $('.fight').css('visibility', 'visible');
+};
+
+$('.fight').css('visibility', 'hidden');
+
 $('.startGame').on('click', function(){
     $('.startScreenText').text("This is you!");
-    $('.startGame').css("display", "none")
-})
+    $('.startGame').css("display", "none");
+    setTimeout(yourNameIsHero, 2000);
+});
+
+
 
 
 

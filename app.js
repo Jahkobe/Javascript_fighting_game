@@ -177,6 +177,7 @@ const enemyDefeated = () => {
 }
 
 const youWin = () => {
+    $('.enemyImage').
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
 }
 
@@ -299,6 +300,41 @@ $('.Inventory').on('click', function(){
 $('.Weapons').on('click', function(){
     Weapons();
 });
+
+
+// start screen functions etc.
+
+$('.fight').css('display', 'none')
+$('.startGame').on('click', function(){
+    $('.startScreenText').text("This is you!");
+    $('.startGame').css("display", "none")
+})
+
+
+
+
+let circle = document.querySelector('.circle');
+let moveBy = 50;
+ 
+window.addEventListener('load', () => {
+    circle.style.position = 'absolute';
+    circle.style.left = 0;
+    circle.style.top = 0;
+});
+ 
+ 
+window.addEventListener('keyup', (e) => {
+    switch (e.key) {
+        case 'ArrowLeft':
+            circle.style.left = parseInt(circle.style.left) - moveBy + 'px';
+            break;
+        case 'ArrowRight':
+            circle.style.left = parseInt(circle.style.left) + moveBy + 'px';
+            break;
+    }
+});
+
+
 
 
 

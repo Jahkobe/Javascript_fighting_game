@@ -6,7 +6,7 @@ body{
     background-color: green;
 }
 
-div{
+.divs{
     width: 100%;
     height: 220px;
     border: 3px solid black;
@@ -130,6 +130,33 @@ h2{
     width: 100%;
     margin: 0;
     display: none;
+}
+
+.startscreenbackground{
+    background-image: url("https://image.freepik.com/free-vector/arcade-game-world-pixel-scene_24640-45908.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+}
+
+.startScreenPlayerImage{
+    margin-top: 5250px;
+    transform-origin:left bottom;
+}
+
+.startScreenText{
+    text-align: center;
+    font-size: 75px;
+    font-family: 'Indie Flower', cursive;
+}
+
+.fightDiv{
+    text-align: center;
+}
+
+.startScreenTextDiv{
+    text-align: center;
 }
 
 

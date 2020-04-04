@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -11,76 +13,20 @@
     <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
-<body>  
-    <div class="enemySection">
-        <div class="enemyStats">
-            <h1 class="enemyStatsHeader">
-                Enemy Stats
-            </h1>
-            <h2 class="enemyHealthBar">
-                Health: <span id="enemyHealth"></span>
-            </h2>
-            <h2 class="enemyMagicBar">
-                Magic:
-            </h2>
-        </div>
-        <div class="enemyImg">
-            <img class="enemyImage" src="https://i.pinimg.com/originals/b5/f0/4b/b5f04b290114d2256b608feea936a357.png" alt="">
-        </div>
+<body class="startscreenbackground">
+    <div class="startScreenTextDiv">
+        <button class="startGame">Start the Game!</button>
+        <h1 class="startScreenText">
+
+        </h1>
+    </div>
+    <div class="fightDiv">
+        <a href="fight.html"><button class="fight">Enter fight!</button></a>
+    </div>
+    <div class="circle">  
+        <img class="playerImage startScreenPlayerImage" src="https://art.pixilart.com/e41a0370c4fa699.png" alt="">
     </div>
 
-    <div class="gameField">
-        <div class="gameFieldImgDiv">
-            <img class="gameFieldImg" src="https://media.istockphoto.com/vectors/pixel-art-seamless-background-vector-id910096142?k=6&m=910096142&s=612x612&w=0&h=-iu_cAZqr9tlDG27SjPWDUvsvWxICtD7Tw9Eo87Vfpw=" alt="">
-            <img class="gameFieldImg" src="https://media.istockphoto.com/vectors/pixel-art-seamless-background-vector-id910096142?k=6&m=910096142&s=612x612&w=0&h=-iu_cAZqr9tlDG27SjPWDUvsvWxICtD7Tw9Eo87Vfpw=" alt="">
-            <img class="gameFieldImg" src="https://media.istockphoto.com/vectors/pixel-art-seamless-background-vector-id910096142?k=6&m=910096142&s=612x612&w=0&h=-iu_cAZqr9tlDG27SjPWDUvsvWxICtD7Tw9Eo87Vfpw=" alt="">
-            <img class="gameFieldImg" src="https://media.istockphoto.com/vectors/pixel-art-seamless-background-vector-id910096142?k=6&m=910096142&s=612x612&w=0&h=-iu_cAZqr9tlDG27SjPWDUvsvWxICtD7Tw9Eo87Vfpw=" alt="">
-        </div>
-    </div>
 
-    <div class="playerSection">
-        <div class="playerImg">
-            <img class="playerImage" src="https://art.pixilart.com/e41a0370c4fa699.png" alt="">
-        </div>
-        <div class="playerStats">
-            <h1 class="playerStatsHeader">
-                Player Stats
-            </h1>
-            <h2 class="playerHealthBar">
-                Health: 
-            </h2>
-            <h2 class="playerMagicBar">
-                Magic:
-            </h2>
-        </div>
-    </div>
-
-    <div class="textContainer">
-        <div class="textBoxDiv">
-            <h1 class="textBox">
-                Let the battle begin!
-            </h1>
-            <button class="attack btn">Attack</button>
-            <button class="defense btn">Defense</button>
-            <button class="Inventory btn">Inventory</button>
-            <button class="Weapons btn">Weapons</button>
-
-        </div>
-        <div class="InventoryWeaponsSection">
-            <div class="InventoryDiv">
-                <h1>
-                    Use an Item:
-                </h1>
-                <button class="close1">Close</button>
-            </div>
-            <div class="WeaponsDiv">
-                <h1>
-                    Equip a Weapon:
-                </h1>
-                <button class="close2">Close</button>
-            </div>
-        </div>
-    </div>
- 
 </body>
 </html>

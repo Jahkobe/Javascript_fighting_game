@@ -54,5 +54,9 @@ Just press that start game and you should be able to figure it out from there.
 
 Unsolved Problems:
 
+One main problem I had was my player keeps showing up in the wrong place at the inital load, sometime he is way lower then I want him to be and won't move at all, other times it works perfectly.
+
+Another problem is during the opening scene, when I'm underneath the button it wont allow me to click it.
+
 I don't neccessarily think there was too much unsolved, I think I more or less just didn't have time to do everything I wanted to do. Like add weapons. Make it so that my player couldn't walk off the screen in the startscreen. Have the animations work better. And have a better visual in the middle of the turn-base fighting screen where you could actually see some attacks happeneing.
 

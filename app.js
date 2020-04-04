@@ -3,14 +3,14 @@ $(() => {
 
 // declaring and appending the healthbar stats to the player stats box
 let playerHealthBar = 100;
-let playerMagicBar = 100;
+// let playerMagicBar = 100;
 let enemyHealthBar = 100;
-let enemyMagicBar = 100;
+// let enemyMagicBar = 100;
 
 $('.playerHealthBar').append(playerHealthBar);
-$('.playerMagicBar').append(playerMagicBar);
+// $('.playerMagicBar').append(playerMagicBar);
 $('.enemyHealthBar').append(enemyHealthBar);
-$('.enemyMagicBar').append(enemyMagicBar);
+// $('.enemyMagicBar').append(enemyMagicBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
@@ -243,14 +243,14 @@ class Player {
         }
 }
 
-class Enemy {
-    constructor(name, power, health, defense){
-        this.name = name;
-        this.power = power;
-        this.health = health;
-        this.defense = defense;
-        }  
-}
+// class Enemy {
+//     constructor(name, power, health, defense){
+//         this.name = name;
+//         this.power = power;
+//         this.health = health;
+//         this.defense = defense;
+//         }  
+// }
 
 
 
@@ -278,13 +278,13 @@ for (index = 0; index < items.length; index++) {
 const Hero = new Player("Hero", "superStrength", 100, "ok");
 console.log(Hero);
 
-const Zombie = new Enemy("Zombie", "zombieStrength", 100, "weak");
+// const Zombie = new Enemy("Zombie", "zombieStrength", 100, "weak");
 
-const Vampire = new Enemy("Vampire", "vampireStrength", 100, "fast");
+// const Vampire = new Enemy("Vampire", "vampireStrength", 100, "fast");
 
-const Mummy = new Enemy("Mummy", "mummyStrength", 100, "slow");
+// const Mummy = new Enemy("Mummy", "mummyStrength", 100, "slow");
 
-const WereWolf = new Enemy("Werewolf", "werewolfStrength", 100, "superfast");
+// const WereWolf = new Enemy("Werewolf", "werewolfStrength", 100, "superfast");
 
 
 $('.attack').on('click', function(){

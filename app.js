@@ -182,7 +182,7 @@ const enemyDefeated = () => {
 const youWin = () => {
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
     $('.btn').css('visibility', 'hidden');
-    const $winbutton = $('<button>').addClass('winButton').attr('src', 'index.html');
+    const $winbutton = $('<button>').addClass('winButton').attr('href', 'index.html').text('You Win!');
     $('.InventoryWeaponsSection').append($winbutton);
     
 

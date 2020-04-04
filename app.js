@@ -14,7 +14,7 @@ $('.enemyMagicBar').append(enemyMagicBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
-const fistStrength = [50];
+const fistStrength = [100];
 // real fistStrength
 // [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
@@ -181,7 +181,18 @@ const enemyDefeated = () => {
 
 const youWin = () => {
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
+    $('.btn').css('visibility', 'hidden');
+    const $winbutton = $('<button>').addClass('winButton').attr('src', 'index.html');
+    $($winbutton).append('.InventoryWeaponsSection');
+    
+
+    $('.winButton').on('click', function(){
+        $('.startScreenText').text("You Win!");
+    });
+
+
 }
+
 
 
 const Inventory = () => {

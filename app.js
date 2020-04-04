@@ -14,13 +14,13 @@ $('.enemyHealthBar').append(enemyHealthBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
-const fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
+let fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
 
-const axeStrength = [0, 30, 35, 36, 37, 50];
+let axeStrength = [0, 30, 35, 36, 37, 50];
 
-const chainsawStrength = [0, 40, 41, 42, 43, 50];
+let chainsawStrength = [0, 40, 41, 42, 43, 50];
 
-const samuriStrength = [0, 40, 45, 50, 48];
+let samuriStrength = [0, 40, 45, 50, 48];
 // real fistStrength
 // [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
@@ -164,21 +164,24 @@ const droppedItems = () => {
 
     
     if(enemies[0] === enemies[1]){
+        fistStrength = chainsawStrength;
         const $bubblegum = $('<button>').addClass(items[1]).text(items[1]);
         $('.InventoryDiv').append($bubblegum);
-        $('.textBox').text('The enemy dropped some bubblegum and you picked it up.');
-        setTimeout(changeEnemies2,2000);
+        $('.textBox').text('The enemy dropped a chainsaw and some bubblegum picked them up, you equipped the chainsaw.');
+        setTimeout(changeEnemies2,5000);
     }else if(enemies[0] === enemies[2]){
+        fistStrength = samuriStrength;
         const $sodapop = $('<button>').addClass(items[2]).text(items[2]);
         $('.InventoryDiv').append($sodapop);
-        $('.textBox').text('The enemy dropped a soda pop and you picked it up.');
-        setTimeout(changeEnemies3,2000);
+        $('.textBox').text('The enemy dropped a samuri sword and a soda pop and you picked them up, you equipped the samuri sword.');
+        setTimeout(changeEnemies3,5000);
         console.log('yo');
     }else if(enemies[0] === enemies[0]){
+        fistStrength = axeStrength;
         const $cookie = $('<button>').addClass(items[0]).text(items[0]);
         $('.InventoryDiv').append($cookie);
-        $('.textBox').text('The enemy dropped a cookie and you picked it up.');
-        setTimeout(changeEnemies1,2000);
+        $('.textBox').text('The enemy dropped an axe and a cookie and you picked them up, you equipped the axe.');
+        setTimeout(changeEnemies1,5000);
     }
 
 }
@@ -191,7 +194,7 @@ const enemyDefeated = () => {
     if(enemies[0] === enemies[3]){
     setTimeout(youWin, 2000);
     }else{
-    setTimeout(droppedItems,2000);
+    setTimeout(droppedItems,4000);
     }
     
 }
@@ -345,12 +348,12 @@ $('.Weapons').on('click', function(){
 
 const yourNameIsHero = () => {
     $('.startScreenText').text("Your name is Hero!");
-    setTimeout(moveAround, 2000);
+    setTimeout(moveAround, 3000);
 };
 
 const moveAround = () => {
     $('.startScreenText').text("Move around using the left and right arrow keys");
-    setTimeout(enemysApproaching, 6000);
+    setTimeout(enemysApproaching, 8000);
 };
 
 const enemysApproaching = () => {

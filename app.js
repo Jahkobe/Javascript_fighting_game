@@ -167,20 +167,20 @@ const droppedItems = () => {
         fistStrength = chainsawStrength;
         const $bubblegum = $('<button>').addClass(items[1]).text(items[1]);
         $('.InventoryDiv').append($bubblegum);
-        $('.textBox').text('The enemy dropped a chainsaw and some bubblegum picked them up, you equipped the chainsaw.');
+        $('.textBox').text('The enemy dropped a chainsaw and some bubblegum picked them up, you equipped the chainsaw and you got stronger.');
         setTimeout(changeEnemies2,5000);
     }else if(enemies[0] === enemies[2]){
         fistStrength = samuriStrength;
         const $sodapop = $('<button>').addClass(items[2]).text(items[2]);
         $('.InventoryDiv').append($sodapop);
-        $('.textBox').text('The enemy dropped a samuri sword and a soda pop and you picked them up, you equipped the samuri sword.');
+        $('.textBox').text('The enemy dropped a samuri sword and a soda pop and you picked them up, you equipped the samuri sword and you got stronger.');
         setTimeout(changeEnemies3,5000);
         console.log('yo');
     }else if(enemies[0] === enemies[0]){
         fistStrength = axeStrength;
         const $cookie = $('<button>').addClass(items[0]).text(items[0]);
         $('.InventoryDiv').append($cookie);
-        $('.textBox').text('The enemy dropped an axe and a cookie and you picked them up, you equipped the axe.');
+        $('.textBox').text('The enemy dropped an axe and a cookie and you picked them up, you equipped the axe and you got stronger.');
         setTimeout(changeEnemies1,5000);
     }
 

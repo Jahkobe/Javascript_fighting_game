@@ -14,7 +14,7 @@ $('.enemyMagicBar').append(enemyMagicBar);
 
 
 // array used to pick a random number from in order to see how much damage the player inflicts on the enemy
-const fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
+const fistStrength = [50];
 // real fistStrength
 // [0,20, 21, 22, 23, 24, 25, 50];
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
@@ -145,17 +145,25 @@ const changeEnemies3 = () => {
 
 const droppedItems = () => {
 
-    const $cookie = $('<button>').addClass('cookie').text('Cookie');
-    $('.InventoryDiv').append($cookie);
-    $('.textBox').text('The enemy dropped a cookie and you picked it up.');
+    
     if(enemies[0] === enemies[1]){
+        const $bubblegum = $('<button>').addClass(items[1]).text(items[1]);
+        $('.InventoryDiv').append($bubblegum);
+        $('.textBox').text('The enemy dropped some bubblegum and you picked it up.');
         setTimeout(changeEnemies2,2000);
     }else if(enemies[0] === enemies[2]){
+        const $sodapop = $('<button>').addClass(items[2]).text(items[2]);
+        $('.InventoryDiv').append($sodapop);
+        $('.textBox').text('The enemy dropped a soda pop and you picked it up.');
         setTimeout(changeEnemies3,2000);
         console.log('yo');
     }else if(enemies[0] === enemies[0]){
+        const $cookie = $('<button>').addClass(items[0]).text(items[0]);
+        $('.InventoryDiv').append($cookie);
+        $('.textBox').text('The enemy dropped a cookie and you picked it up.');
         setTimeout(changeEnemies1,2000);
     }
+
 }
 
 const enemyDefeated = () => {
@@ -188,7 +196,21 @@ const Inventory = () => {
         $('.cookie').css('display', 'none');
         setTimeout(enemyAttack, 2000);
     });
-  
+    $('.bubblegum').on('click', function(){
+        $('.playerHealthBar').text(`Health: ${playerHealthBar = playerHealthBar + 15}`);
+        $('.textBox').text('You chewed on the bubblegum and regained 15 health!');
+        $('.InventoryDiv').css('display', 'none');
+        $('.bubblegum').css('display', 'none');
+        setTimeout(enemyAttack, 2000);
+    });
+    $('.sodapop').on('click', function(){
+        $('.playerHealthBar').text(`Health: ${playerHealthBar = playerHealthBar + 20}`);
+        $('.textBox').text('You chewed on the bubblegum and regained 20 health!');
+        $('.InventoryDiv').css('display', 'none');
+        $('.sodapop').css('display', 'none');
+        setTimeout(enemyAttack, 2000);
+    });
+
 }
 
 
@@ -234,10 +256,14 @@ const PlayerStats = {
 
 const enemies = ["Zombie", "Vampire", "Mummy", "Werewolf"];
 
-const cookies = ["cookie", "bubblegun", "soda pop", "trail mix"]
+const items = ["cookie", "bubblegum", "sodapop", "trail mix"];
 
 for (index = 0; index < enemies.length; index++) { 
     console.log(enemies[0]);
+} 
+
+for (index = 0; index < items.length; index++) { 
+    console.log(items[0]);
 } 
 
 

@@ -42,6 +42,14 @@ Also just getting the next badguy to appear by using a for loop and an array too
 
 Technologies used:
 
+HTML5
+
+CSS
+
+Javascript
+
+jQuery
+
 Basically just a ton of functions with setTimeout functions inside of them, where I would update the text for the healthbar as well as inside the text box.
 
 Did most of the work through the DOM as well as the basic elements I already had in place inside the html. Also used some of the animations in css on the animate page that we learned about in class. Although it didn't exactly work as well I wanted it to.
@@ -64,3 +72,4 @@ Another problem is during the opening scene, when I'm underneath the button it w
 
 I don't neccessarily think there was too much unsolved, I think I more or less just didn't have time to do everything I wanted to do. Like add weapons. Make it so that my player couldn't walk off the screen in the startscreen. Have the animations work better. And have a better visual in the middle of the turn-base fighting screen where you could actually see some attacks happeneing.
 
+Also responsive design needs a lot of work.

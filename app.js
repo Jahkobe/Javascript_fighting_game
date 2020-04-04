@@ -184,9 +184,12 @@ const youWin = () => {
     $('.btn').css('visibility', 'hidden');
     const $winbutton = $('<button>').addClass('winButton').attr('href', 'index.html').text('You Win!, Start Over?');
     $('.winning').append($winbutton);
+
     
 };
 
+
+// this updates inventory and has all of the onclick functions for all the objects once they are inside of the inventory
 
 const Inventory = () => {
     $('.btn').css('visibility', 'hidden');

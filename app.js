@@ -13,16 +13,15 @@ $('.enemyHealthBar').append(enemyHealthBar);
 // $('.enemyMagicBar').append(enemyMagicBar);
 
 
-// array used to pick a random number from in order to see how much damage the player inflicts on the enemy
+// arrays used to pick a random number from in order to see how much damage the player inflicts on the enemy
 let fistStrength = [0,20, 21, 22, 23, 24, 25, 50];
 
 let axeStrength = [0, 30, 35, 36, 37, 50];
 
 let chainsawStrength = [0, 40, 41, 42, 43, 50];
 
-let samuriStrength = [0, 40, 45, 50, 48];
-// real fistStrength
-// [0,20, 21, 22, 23, 24, 25, 50];
+let samuriStrength = [0, 40, 45, 48, 50];
+
 // array used to pick a random number from in order to see how much damage the enemy inflicts on the player
 const zombieStrength = [0,4,5,6,7,8,9];
 // this is the array used to choose randomly from that decides whether the enemy attacks or defends
@@ -47,13 +46,14 @@ const enemyHealth = () => {
             if(PlayerStats.hitDamage > 0){
                 $('.textBox').text(`${enemies[0]} took ${PlayerStats.hitDamage} Damage!`);
                 $('.enemyHealthBar').text(`Health: ${enemyHealthBar}`);
-                $('.enemyImg').css('background-color' , 'white');
+                $('#enemySlot').css({'background-color':'red'});
+                $('#enemySlot').css({'animation-name':'flip-horizontal-bottom'});
             }else{
                 $('.textBox').text(`${Hero.name}s attack missed!`);
                 setTimeout(enemyAttack, 2000);
             }
 
-            setTimeout(enemyAttack, 2000);
+            setTimeout(enemyBackToNormal, 2000);
         }
 
 }
@@ -66,22 +66,23 @@ const playerHealth = () => {
     playerHealthBar = playerHealthBar - PlayerStats.hitDamage;
 
 
-        if(PlayerStats.hitDamage > 0){
-            $('.textBox').text(`${Hero.name} took ${PlayerStats.hitDamage} Damage!`);
-            $('.playerHealthBar').text(`Health: ${playerHealthBar}`);
-            $('.playerImg').css('background-color' , 'red');
-            $('.playerImg').css('animation-name', 'flip-horizontal-bottom');
 
             if(playerHealthBar < 1){
-                $('.textBox').text(`${Hero.name} defeated ${enemies[0]}!`);
-                setTimeout(backToNormalWindow, 2000); 
+                $('.textBox').text(`${Hero.name} has been defeated!`);
+                setTimeout(youLose, 2000); 
             }else{
+
+                if(PlayerStats.hitDamage > 0){
+                    $('.textBox').text(`${Hero.name} took ${PlayerStats.hitDamage} Damage!`);
+                    $('.playerHealthBar').text(`Health: ${playerHealthBar}`);
+                    $('.playerImg').css('background-color' , 'red');
+                    $('.playerImg').css('animation-name', 'flip-horizontal-bottom'); 
+                }else{
+                    $('.textBox').text(`${enemies[0]}s attack missed!`)
+                    setTimeout(backToNormalWindow, 2000); 
+                }
                 setTimeout(backToNormalWindow, 2000); 
-            }      
-        }else{
-            $('.textBox').text(`${enemies[0]}s attack missed!`)
-            setTimeout(backToNormalWindow, 2000); 
-        }
+            }
 
 }
 
@@ -97,6 +98,12 @@ const enemyAttack = () => {
     $('.textBox').text(`${enemies[0]} Attacks`);
     console.log(`${enemies[0]} Attacks`);
     setTimeout(playerHealth, 2000);
+}
+
+const enemyBackToNormal = () => {
+    $('#enemySlot').css('background-color' , 'white');
+    $('#enemySlot').css({'animation-name':'none'});
+    setTimeout(enemyAttack, 1000);
 }
 
 // this was an attempt to set the background back to white after enemy is injured
@@ -205,10 +212,15 @@ const youWin = () => {
     $('.textBox').text(`You defeated all the bad guys! Your freaking awesome!`);
     $('.btn').css('visibility', 'hidden');
     const $winbutton = $('<button>').addClass('winButton').attr('href', 'index.html').text('You Win!, Start Over?');
-    $('.winning').append($winbutton);
-
-    
+    $('.winning').append($winbutton);  
 };
+
+const youLose = () => {
+    $('.textBox').text(`You have been defeated!`);
+    $('.btn').css('visibility', 'hidden');
+    const $losebutton = $('<button>').addClass('loseButton').attr('href', 'index.html').text('You Lost!, Start Over?');
+    $('.winning').append($losebutton);  
+}
 
 
 // this updates inventory and has all of the onclick functions for all the objects once they are inside of the inventory
@@ -322,8 +334,6 @@ console.log(Hero);
 
 $('.attack').on('click', function(){
         playerAttack();
-        $('.enemyImg').css('background-color' , 'red');
-        $('.enemyImg').css('animation-name', 'flip-horizontal-bottom');
         $('.btn').css('visibility', 'hidden');
     });
 

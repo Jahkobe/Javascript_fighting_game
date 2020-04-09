@@ -50,6 +50,8 @@ Javascript
 
 jQuery
 
+Vanilla Javascript
+
 Basically just a ton of functions with setTimeout functions inside of them, where I would update the text for the healthbar as well as inside the text box.
 
 Did most of the work through the DOM as well as the basic elements I already had in place inside the html. Also used some of the animations in css on the animate page that we learned about in class. Although it didn't exactly work as well I wanted it to.

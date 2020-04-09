@@ -1,6 +1,9 @@
 $(() => {
 
 
+var audio = new Audio('battle.wav');
+audio.play();
+
 // declaring and appending the healthbar stats to the player stats box
 let playerHealthBar = 100;
 // let playerMagicBar = 100;
@@ -109,6 +112,7 @@ const enemyBackToNormal = () => {
 // this was an attempt to set the background back to white after enemy is injured
 const backToNormalWindow = () => {
     $('.playerImg').css('background-color' , 'white');
+    $('.playerImg').css({'animation-name':'none'});
     setTimeout(yourTurn, 1000);
 }
 
